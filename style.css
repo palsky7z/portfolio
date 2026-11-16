@@ -440,6 +440,7 @@ ul {
   display: grid;
   grid-template-columns: repeat(3, 1fr);
   gap: 28px;
+  align-items: stretch;
 }
 
 .skill-card {
@@ -448,6 +449,9 @@ ul {
   border-radius: var(--radius-lg);
   padding: 32px 24px;
   transition: var(--transition);
+  display: flex;
+  flex-direction: column;
+  height: 100%;
 }
 
 .skill-card:hover {
@@ -457,37 +461,35 @@ ul {
 }
 
 .skill-icon {
-  font-size: 2rem;
-  color: var(--accent-primary);
-  margin-bottom: 16px;
+  font-size: 2.2rem;
+  color: var(--accent-secondary);
+  margin-bottom: 20px;
 }
 
+/* KUNCI AGAR SEJAJAR: Beri min-height agar judul 1 dan 2 baris memiliki ruang sama */
 .skill-card h3 {
   font-size: 1.25rem;
   font-weight: 700;
-  margin-bottom: 10px;
+  margin-bottom: 12px;
+  min-height: 3.2rem;
+  display: flex;
+  align-items: flex-start;
 }
 
 .skill-card p {
   font-size: 0.95rem;
   color: var(--text-muted);
-  margin-bottom: 20px;
+  margin-bottom: 24px;
+  line-height: 1.6;
+  flex-grow: 1; /* Mendorong kotak tags selalu rapat ke bawah */
 }
 
+/* KUNCI KEDUA: Tag akan selalu sejajar di dasar kartu */
 .skill-tags {
   display: flex;
   flex-wrap: wrap;
   gap: 8px;
-}
-
-.skill-tags span {
-  font-size: 0.8rem;
-  font-weight: 500;
-  background: rgba(255, 255, 255, 0.05);
-  border: 1px solid var(--border-color);
-  padding: 4px 10px;
-  border-radius: var(--radius-sm);
-  color: var(--text-muted);
+  margin-top: auto;
 }
 
 /* ==========================================================================
