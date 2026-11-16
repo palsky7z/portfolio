@@ -488,10 +488,35 @@ ul {
 .skill-tags {
   display: flex;
   flex-wrap: wrap;
-  gap: 8px;
+  gap: 10px;
   margin-top: auto;
 }
-
+/* Kotak individual untuk tiap skill (seperti contoh kartu DANA/ShopeePay) */
+.skill-tags span {
+  font-size: 0.85rem;
+  font-weight: 500;
+  background: rgba(255, 255, 255, 0.05); /* Warna dasar kotak */
+  border: 1px solid rgba(255, 255, 255, 0.14); /* Garis tepi kotak */
+  padding: 8px 14px; /* Jarak ruang di dalam kotak */
+  border-radius: 10px; /* Sudut melengkung rapi */
+  color: #f3f4f6;
+  display: inline-flex;
+  align-items: center;
+  gap: 8px; /* Jarak antara ikon dan teks */
+  transition: all 0.2s ease;
+}
+/* Warna ikon di dalam kotak */
+.skill-tags span i {
+  color: var(--accent-secondary);
+  font-size: 0.85rem;
+}
+/* Efek menyala saat kursor diarahkan ke kotak */
+.skill-tags span:hover {
+  background: rgba(99, 102, 241, 0.15);
+  border-color: rgba(99, 102, 241, 0.45);
+  color: #ffffff;
+  transform: translateY(-2px);
+}
 /* ==========================================================================
    PROJECTS SECTION
    ========================================================================== */
