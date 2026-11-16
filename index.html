@@ -1,0 +1,289 @@
+<!DOCTYPE html>
+<html lang="id">
+<head>
+  <meta charset="UTF-8" />
+  <meta name="viewport" content="width=device-width, initial-scale=1.0" />
+  <meta name="description" content="Portofolio Pribadi - Web Developer & Designer" />
+  <title>Portofolio | Nama Anda</title>
+  <link rel="stylesheet" href="style.css" />
+  <!-- Google Fonts -->
+  <link rel="preconnect" href="https://fonts.googleapis.com" />
+  <link rel="preconnect" href="https://fonts.gstatic.com" crossorigin />
+  <link href="https://fonts.googleapis.com/css2?family=Plus+Jakarta+Sans:wght@300;400;500;600;700;800&display=swap" rel="stylesheet" />
+  <!-- Font Awesome untuk Ikon -->
+  <link rel="stylesheet" href="https://cdnjs.cloudflare.com/ajax/libs/font-awesome/6.5.1/css/all.min.css" />
+</head>
+<body>
+  <!-- Navigation -->
+  <header class="header">
+    <nav class="navbar container">
+      <a href="#hero" class="nav-logo">Portofolio<span>.</span></a>
+      <ul class="nav-menu" id="nav-menu">
+        <li class="nav-item"><a href="#about" class="nav-link">Tentang</a></li>
+        <li class="nav-item"><a href="#skills" class="nav-link">Keahlian</a></li>
+        <li class="nav-item"><a href="#projects" class="nav-link">Proyek</a></li>
+        <li class="nav-item"><a href="#contact" class="nav-link">Kontak</a></li>
+        <li class="nav-item">
+          <a href="#contact" class="btn btn-sm btn-primary">Hire Me</a>
+        </li>
+      </ul>
+      <button class="nav-toggle" id="nav-toggle" aria-label="Buka menu navigasi">
+        <i class="fa-solid fa-bars"></i>
+      </button>
+    </nav>
+  </header>
+
+  <main>
+    <!-- Hero Section -->
+    <section class="hero" id="hero">
+      <div class="container hero-container">
+        <div class="hero-content">
+          <div class="hero-badge">
+            <span class="badge-dot"></span> Siap untuk proyek baru
+          </div>
+          <h1 class="hero-title">
+            Halo, Saya <span class="gradient-text">Naufal Giovedi Ronswid</span>
+          </h1>
+          <h2 class="hero-subtitle">Software Developer / Tech Enthusiast</h2>
+          <p class="hero-desc">
+            Saya membantu membangun aplikasi web modern, cepat, dan user-friendly. Berfokus pada arsitektur kode yang bersih dan tampilan antarmuka yang intuitif.
+          </p>
+          <div class="hero-cta">
+            <a href="#projects" class="btn btn-primary">
+              Lihat Proyek <i class="fa-solid fa-arrow-right"></i>
+            </a>
+            <a href="#contact" class="btn btn-outline">Hubungi Saya</a>
+          </div>
+          <div class="hero-socials">
+            <a href="https://github.com" target="_blank" rel="noopener" aria-label="GitHub"><i class="fa-brands fa-github"></i></a>
+            <a href="https://linkedin.com" target="_blank" rel="noopener" aria-label="LinkedIn"><i class="fa-brands fa-linkedin"></i></a>
+            <a href="mailto:giovediofal@gmail.com" aria-label="Email"><i class="fa-solid fa-envelope"></i></a>
+            <a href="https://instagram.com/ofalgiovedi" target="_blank" rel="noopener" aria-label="Instagram"><i class="fa-brands fa-instagram"></i></a>
+          </div>
+        </div>
+        <div class="hero-visual">
+          <div class="avatar-card">
+            <div class="avatar-img-wrapper">
+              <!-- Ganti URL foto berikut dengan foto Anda -->
+              <img src="https://images.unsplash.com/photo-1534528741775-53994a69daeb?auto=format&fit=crop&w=600&q=80" alt="Foto Profil" class="avatar-img" />
+            </div>
+            <div class="floating-badge badge-1">
+              <i class="fa-solid fa-code"></i>
+              <span>Clean Code</span>
+            </div>
+            <div class="floating-badge badge-2">
+              <i class="fa-solid fa-bolt"></i>
+              <span>Fast Performance</span>
+            </div>
+          </div>
+        </div>
+      </div>
+    </section>
+
+    <!-- About Section -->
+    <section class="section about" id="about">
+      <div class="container">
+        <div class="section-header">
+          <span class="section-tag">Tentang Saya</span>
+          <h2 class="section-title">Dedikasi untuk Solusi Digital Berkualitas</h2>
+        </div>
+        <div class="about-grid">
+          <div class="about-text">
+            <p>
+              Saya adalah seorang web developer dengan passion dalam menciptakan pengalaman digital yang menarik dan fungsional. Berpengalaman dalam merancang mulai dari antarmuka frontend interaktif hingga integrasi backend yang andal.
+            </p>
+            <p>
+              Saya menyukai tantangan dalam memecahkan masalah kompleks menjadi solusi sederhana yang mudah digunakan orang banyak. Selalu bersemangat mempelajari teknologi baru dan mengikuti perkembangan tren web terkini.
+            </p>
+            <div class="about-highlights">
+              <div class="highlight-item">
+                <span class="highlight-number">3+</span>
+                <span class="highlight-label">Tahun Pengalaman</span>
+              </div>
+              <div class="highlight-item">
+                <span class="highlight-number">25+</span>
+                <span class="highlight-label">Proyek Selesai</span>
+              </div>
+              <div class="highlight-item">
+                <span class="highlight-number">100%</span>
+                <span class="highlight-label">Komitmen Klien</span>
+              </div>
+            </div>
+          </div>
+        </div>
+      </div>
+    </section>
+
+    <!-- Skills Section -->
+    <section class="section skills" id="skills">
+      <div class="container">
+        <div class="section-header">
+          <span class="section-tag">Keahlian</span>
+          <h2 class="section-title">Teknologi & Alat yang Dikuasai</h2>
+        </div>
+        <div class="skills-grid">
+          <div class="skill-card">
+            <div class="skill-icon"><i class="fa-brands fa-html5"></i></div>
+            <h3>Frontend Development</h3>
+            <p>Membangun antarmuka web yang responsif, cepat, dan ramah pengguna.</p>
+            <div class="skill-tags">
+              <span>HTML5</span>
+              <span>CSS3 / Tailwind</span>
+              <span>JavaScript</span>
+              <span>React / Vue</span>
+            </div>
+          </div>
+
+          <div class="skill-card">
+            <div class="skill-icon"><i class="fa-solid fa-server"></i></div>
+            <h3>Backend & API</h3>
+            <p>Mengelola logika server, basis data, dan arsitektur RESTful API yang aman.</p>
+            <div class="skill-tags">
+              <span>Node.js</span>
+              <span>Express</span>
+              <span>PostgreSQL</span>
+              <span>REST APIs</span>
+            </div>
+          </div>
+
+          <div class="skill-card">
+            <div class="skill-icon"><i class="fa-solid fa-screwdriver-wrench"></i></div>
+            <h3>Tools & Workflow</h3>
+            <p>Alat dan metodologi untuk alur kerja pengembangan perangkat lunak efisien.</p>
+            <div class="skill-tags">
+              <span>Git & GitHub</span>
+              <span>VS Code</span>
+              <span>Figma</span>
+              <span>Vercel / Netlify</span>
+            </div>
+          </div>
+        </div>
+      </div>
+    </section>
+
+    <!-- Projects Section -->
+    <section class="section projects" id="projects">
+      <div class="container">
+        <div class="section-header">
+          <span class="section-tag">Portofolio</span>
+          <h2 class="section-title">Proyek Pilihan Terbaru</h2>
+        </div>
+        <div class="projects-grid">
+          <!-- Project 1 -->
+          <article class="project-card">
+            <div class="project-img-wrapper">
+              <img src="https://images.unsplash.com/photo-1460925895917-afdab827c52f?auto=format&fit=crop&w=700&q=80" alt="Dashboard Analytics" class="project-img" />
+            </div>
+            <div class="project-info">
+              <div class="project-tags">
+                <span>Web App</span>
+                <span>Dashboard</span>
+              </div>
+              <h3 class="project-title">SaaS Analytics Dashboard</h3>
+              <p class="project-desc">
+                Platform visualisasi data performa penjualan secara real-time dengan grafik interaktif dan integrasi sistem pembayaran.
+              </p>
+              <div class="project-links">
+                <a href="#" class="project-link" target="_blank" rel="noopener"><i class="fa-solid fa-arrow-up-right-from-square"></i> Live Demo</a>
+                <a href="#" class="project-link" target="_blank" rel="noopener"><i class="fa-brands fa-github"></i> Source Code</a>
+              </div>
+            </div>
+          </article>
+
+          <!-- Project 2 -->
+          <article class="project-card">
+            <div class="project-img-wrapper">
+              <img src="https://images.unsplash.com/photo-1472851294608-062f824d29cc?auto=format&fit=crop&w=700&q=80" alt="E-Commerce Storefront" class="project-img" />
+            </div>
+            <div class="project-info">
+              <div class="project-tags">
+                <span>E-Commerce</span>
+                <span>Jamstack</span>
+              </div>
+              <h3 class="project-title">Modern E-Commerce Store</h3>
+              <p class="project-desc">
+                Toko online modern yang memiliki filter kategori instan, cart checkout yang mulus, dan desain responsif mobile.
+              </p>
+              <div class="project-links">
+                <a href="#" class="project-link" target="_blank" rel="noopener"><i class="fa-solid fa-arrow-up-right-from-square"></i> Live Demo</a>
+                <a href="#" class="project-link" target="_blank" rel="noopener"><i class="fa-brands fa-github"></i> Source Code</a>
+              </div>
+            </div>
+          </article>
+
+          <!-- Project 3 -->
+          <article class="project-card">
+            <div class="project-img-wrapper">
+              <img src="https://images.unsplash.com/photo-1551288049-bebda4e38f71?auto=format&fit=crop&w=700&q=80" alt="Finance App" class="project-img" />
+            </div>
+            <div class="project-info">
+              <div class="project-tags">
+                <span>Fintech</span>
+                <span>Mobile First</span>
+              </div>
+              <h3 class="project-title">Personal Finance Tracker</h3>
+              <p class="project-desc">
+                Aplikasi pencatat pengeluaran dan pemasukan harian dengan fitur budget reminder dan ekspor laporan bulanan.
+              </p>
+              <div class="project-links">
+                <a href="#" class="project-link" target="_blank" rel="noopener"><i class="fa-solid fa-arrow-up-right-from-square"></i> Live Demo</a>
+                <a href="#" class="project-link" target="_blank" rel="noopener"><i class="fa-brands fa-github"></i> Source Code</a>
+              </div>
+            </div>
+          </article>
+        </div>
+      </div>
+    </section>
+
+    <!-- Contact Section -->
+    <section class="section contact" id="contact">
+      <div class="container">
+        <div class="contact-box">
+          <div class="contact-header">
+            <span class="section-tag">Hubungi Saya</span>
+            <h2 class="section-title">Punya Proyek atau Ide Menarik?</h2>
+            <p>
+              Jangan ragu untuk berdiskusi tentang peluang kerja sama, proyek freelance, atau sekadar bertukar ide.
+            </p>
+          </div>
+          <div class="contact-methods">
+            <a href="mailto:emailanda@domain.com" class="contact-card">
+              <div class="contact-card-icon"><i class="fa-solid fa-envelope"></i></div>
+              <div>
+                <h4>Email</h4>
+                <p>emailanda@domain.com</p>
+              </div>
+            </a>
+            <a href="https://wa.me/628123456789" target="_blank" rel="noopener" class="contact-card">
+              <div class="contact-card-icon"><i class="fa-brands fa-whatsapp"></i></div>
+              <div>
+                <h4>WhatsApp</h4>
+                <p>+62 812-3456-789</p>
+              </div>
+            </a>
+            <a href="https://linkedin.com" target="_blank" rel="noopener" class="contact-card">
+              <div class="contact-card-icon"><i class="fa-brands fa-linkedin"></i></div>
+              <div>
+                <h4>LinkedIn</h4>
+                <p>linkedin.com/in/namaanda</p>
+              </div>
+            </a>
+          </div>
+        </div>
+      </div>
+    </section>
+  </main>
+
+  <!-- Footer -->
+  <footer class="footer">
+    <div class="container footer-container">
+      <p>&copy; <span id="year"></span> Nama Anda. Hak Cipta Dilindungi.</p>
+      <div class="footer-links">
+        <a href="#hero">Kembali ke Atas <i class="fa-solid fa-arrow-up"></i></a>
+      </div>
+    </div>
+  </footer>
+
+  <script src="script.js"></script>
+</body>
+</html>
