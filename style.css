@@ -342,6 +342,7 @@ ul {
   width: 100%;
   height: 100%;
   object-fit: cover;
+  object-position: center 15%; /* Memastikan posisi kepala pas di bingkai */
   transition: transform 0.5s ease;
 }
 
@@ -369,15 +370,18 @@ ul {
   color: var(--accent-secondary);
 }
 
+/* Geser ke sudut atas luar agar tidak menutupi wajah */
 .badge-1 {
-  top: 15%;
-  left: -20px;
+  top: -12px;
+  left: -25px;
 }
 
+/* Geser lebih ke bawah kanan */
 .badge-2 {
-  bottom: 12%;
-  right: -20px;
+  bottom: 6%;
+  right: -25px;
   animation-delay: 2s;
+}imation-delay: 2s;
 }
 
 @keyframes float {
