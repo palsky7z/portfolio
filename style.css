@@ -1851,3 +1851,125 @@ ul {
   align-items: center;
   gap: 1rem;
 }
+
+/* ==========================================================================
+   STYLE KARTU SKILLS & TOOLS (PERSIS ALA ALFARI.MY.ID)
+   ========================================================================== */
+
+/* 1. Grid 6 Kolom Simetris & Lega */
+.skills-grid-12 {
+  display: grid !important;
+  grid-template-columns: repeat(6, 1fr) !important; /* 6 Kolom */
+  gap: 16px !important;
+  max-width: 1080px !important; /* Lebar pas agar tiap kotak lega (~165px) */
+  margin: 0 auto !important;
+  width: 100% !important;
+  padding: 10px 0 !important;
+}
+
+@media (max-width: 1024px) {
+  .skills-grid-12 {
+    grid-template-columns: repeat(4, 1fr) !important;
+    gap: 14px !important;
+  }
+}
+
+@media (max-width: 768px) {
+  .skills-grid-12 {
+    grid-template-columns: repeat(3, 1fr) !important;
+    gap: 12px !important;
+  }
+}
+
+@media (max-width: 480px) {
+  .skills-grid-12 {
+    grid-template-columns: repeat(2, 1fr) !important;
+    gap: 10px !important;
+  }
+}
+
+/* 2. Kartu Persegi 1:1 Dark Glassmorphism */
+.skill-card-tool {
+  position: relative !important;
+  aspect-ratio: 1 / 1 !important; /* Persegi bujur sangkar murni ala alfari */
+  background: rgba(13, 21, 38, 0.7) !important;
+  backdrop-filter: blur(12px) !important;
+  -webkit-backdrop-filter: blur(12px) !important;
+  border: 1px solid rgba(255, 255, 255, 0.08) !important;
+  border-radius: 20px !important;
+  padding: 16px 8px !important;
+  display: flex !important;
+  flex-direction: column !important;
+  align-items: center !important;
+  justify-content: center !important;
+  cursor: pointer !important;
+  user-select: none !important;
+  overflow: hidden !important;
+  transition: all 0.25s cubic-bezier(0.4, 0, 0.2, 1) !important;
+  box-shadow: 0 4px 20px rgba(0, 0, 0, 0.3) !important;
+}
+
+/* Hilangkan garis flare pojok */
+.skill-card-tool::before,
+.skill-card-tool::after,
+.skill-card-tool .edge-light {
+  display: none !important;
+}
+
+/* Efek Hover Mengangkat & Glow Biru Halus */
+.skill-card-tool:hover {
+  transform: translateY(-5px) !important;
+  background: rgba(17, 28, 52, 0.85) !important;
+  border-color: rgba(56, 189, 248, 0.45) !important;
+  box-shadow: 0 12px 28px -4px rgba(0, 0, 0, 0.6), 0 0 18px rgba(56, 189, 248, 0.15) !important;
+}
+
+/* 3. Konten Kartu di Tengah */
+.portfolio-skill-card-content {
+  width: 100% !important;
+  height: 100% !important;
+  display: flex !important;
+  flex-direction: column !important;
+  align-items: center !important;
+  justify-content: center !important;
+  gap: 10px !important;
+  padding: 0 !important;
+  box-sizing: border-box !important;
+}
+
+/* 4. Wadah Ikon & Ikon Besar (52px) */
+.tool-icon-wrapper {
+  width: 54px !important;
+  height: 54px !important;
+  display: flex !important;
+  align-items: center !important;
+  justify-content: center !important;
+  transition: transform 0.25s ease !important;
+}
+
+.skill-card-tool:hover .tool-icon-wrapper {
+  transform: scale(1.1) !important;
+}
+
+.tool-svg-icon {
+  width: 52px !important;
+  height: 52px !important;
+  display: block !important;
+  filter: drop-shadow(0 4px 8px rgba(0, 0, 0, 0.35)) !important;
+}
+
+/* 5. Teks Nama Tool (Tebal, Putih, Menyesuaikan jika Ada 'Microsoft') */
+.tool-name {
+  font-family: 'Plus Jakarta Sans', system-ui, sans-serif !important;
+  font-size: 0.82rem !important; /* 13px yang pas untuk kartu 6 kolom */
+  font-weight: 700 !important;
+  color: #ffffff !important;
+  text-align: center !important;
+  letter-spacing: -0.2px !important;
+  margin: 0 !important;
+  padding: 0 4px !important;
+  white-space: normal !important; /* Kata panjang turun baris rapi */
+  line-height: 1.2 !important;
+  word-break: normal !important;
+  max-width: 100% !important;
+}
