@@ -1915,4 +1915,112 @@ ul {
   align-items: center;
   gap: 1rem;
 }
+/* ==========================================================================
+   GRID SKILLS BESAR (4 KOLOM) & TULISAN MICROSOFT LENGKAP
+   ========================================================================== */
 
+/* 1. Grid 4 Kolom (Kotak Jadi Besar & Lega) */
+.skills-grid-12 {
+  display: grid !important;
+  grid-template-columns: repeat(4, 1fr) !important; /* 4 kartu per baris */
+  gap: 20px !important;
+  max-width: 1040px !important; /* Wadah lebih lebar */
+  margin: 0 auto !important;
+  width: 100% !important;
+  padding: 12px 0 !important;
+}
+
+@media (max-width: 900px) {
+  .skills-grid-12 {
+    grid-template-columns: repeat(3, 1fr) !important; /* 3 kartu di tablet */
+    gap: 16px !important;
+  }
+}
+
+@media (max-width: 600px) {
+  .skills-grid-12 {
+    grid-template-columns: repeat(2, 1fr) !important; /* 2 kartu di HP */
+    gap: 14px !important;
+  }
+}
+
+/* 2. Ukuran Kartu Lebih Luas & Mewah */
+.skill-card-tool {
+  position: relative !important;
+  min-height: 150px !important; /* Tinggi kartu mantap */
+  background: rgba(13, 21, 38, 0.75) !important;
+  backdrop-filter: blur(12px) !important;
+  -webkit-backdrop-filter: blur(12px) !important;
+  border: 1px solid rgba(255, 255, 255, 0.08) !important;
+  border-radius: 20px !important;
+  padding: 24px 16px 20px !important;
+  display: flex !important;
+  flex-direction: column !important;
+  align-items: center !important;
+  justify-content: center !important;
+  cursor: pointer !important;
+  user-select: none !important;
+  overflow: hidden !important;
+  transition: all 0.25s cubic-bezier(0.4, 0, 0.2, 1) !important;
+  box-shadow: 0 6px 24px rgba(0, 0, 0, 0.35) !important;
+}
+
+/* Hilangkan garis flare pojok */
+.skill-card-tool::before,
+.skill-card-tool::after,
+.skill-card-tool .edge-light {
+  display: none !important;
+}
+
+.skill-card-tool:hover {
+  transform: translateY(-6px) !important;
+  background: rgba(17, 28, 52, 0.85) !important;
+  border-color: rgba(56, 189, 248, 0.45) !important;
+  box-shadow: 0 14px 32px -4px rgba(0, 0, 0, 0.6), 0 0 20px rgba(56, 189, 248, 0.2) !important;
+}
+
+.portfolio-skill-card-content {
+  width: 100% !important;
+  height: 100% !important;
+  display: flex !important;
+  flex-direction: column !important;
+  align-items: center !important;
+  justify-content: center !important;
+  gap: 14px !important;
+  padding: 0 !important;
+}
+
+/* 3. Ikon Lebih Besar & Gagah (60px) */
+.tool-icon-wrapper {
+  width: 64px !important;
+  height: 64px !important;
+  display: flex !important;
+  align-items: center !important;
+  justify-content: center !important;
+  transition: transform 0.25s ease !important;
+}
+
+.skill-card-tool:hover .tool-icon-wrapper {
+  transform: scale(1.1) !important;
+}
+
+.tool-svg-icon {
+  width: 60px !important;
+  height: 60px !important;
+  display: block !important;
+  filter: drop-shadow(0 4px 10px rgba(0, 0, 0, 0.35)) !important;
+}
+
+/* 4. Tulisan Microsoft Bebas Lega (Tidak Akan Terpotong) */
+.tool-name {
+  font-family: 'Plus Jakarta Sans', system-ui, sans-serif !important;
+  font-size: 0.92rem !important;
+  font-weight: 700 !important;
+  color: #ffffff !important;
+  text-align: center !important;
+  margin: 0 !important;
+  padding: 0 4px !important;
+  white-space: normal !important; /* Izinkan adaptif jika layar mengecil */
+  line-height: 1.3 !important;
+  letter-spacing: -0.2px !important;
+}
