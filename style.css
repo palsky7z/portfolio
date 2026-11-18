@@ -1586,21 +1586,21 @@ ul {
   display: block !important;
 }
 /* ==========================================================================
-   STYLE KARTU SKILLS & TOOLS (PERSIS SEPERTI KARTU REACT REFERENSI)
+   STYLE KARTU SKILLS & TOOLS (6 GRID BESAR, LEGA & RAPI)
    ========================================================================== */
 
-/* 1. Grid 6 Kolom yang Rapi & Proporsional */
+/* 1. Grid 6 Kolom yang Lebih Lebar & Besar */
 .skills-grid-12 {
   display: grid !important;
-  grid-template-columns: repeat(6, 1fr) !important;
-  gap: 20px !important;
-  max-width: 980px !important;
+  grid-template-columns: repeat(6, 1fr) !important; /* Tetap 6 Kolom */
+  gap: 18px !important;
+  max-width: 1180px !important; /* Diperlebar agar tiap kotak jadi besar (~182px) */
   margin: 0 auto !important;
   width: 100% !important;
-  padding: 8px 4px !important;
+  padding: 10px 4px !important;
 }
 
-@media (max-width: 1024px) {
+@media (max-width: 1100px) {
   .skills-grid-12 {
     grid-template-columns: repeat(4, 1fr) !important;
     gap: 16px !important;
@@ -1621,90 +1621,84 @@ ul {
   }
 }
 
-/* 2. Kartu Persegi (Squircle) dengan Dark Glassmorphism */
+/* 2. Kartu Besar, Kokoh & Glassmorphism Elegan */
 .skill-card-tool {
   position: relative !important;
-  aspect-ratio: 1 / 1 !important; /* Memastikan kartu berbentuk kotak bujur sangkar */
-  background: linear-gradient(165deg, rgba(14, 21, 38, 0.85) 0%, rgba(8, 12, 24, 0.94) 100%) !important;
-  backdrop-filter: blur(16px) !important;
-  -webkit-backdrop-filter: blur(16px) !important;
-  border: 1px solid rgba(255, 255, 255, 0.1) !important;
+  aspect-ratio: 1 / 1.08 !important; /* Bentuk kotak kokoh proporsional */
+  min-height: 165px !important;
+  background: rgba(13, 21, 38, 0.75) !important;
+  backdrop-filter: blur(14px) !important;
+  -webkit-backdrop-filter: blur(14px) !important;
+  border: 1px solid rgba(255, 255, 255, 0.08) !important;
   border-radius: 22px !important;
-  padding: 20px 14px 16px !important;
+  padding: 22px 10px 16px !important;
   display: flex !important;
   flex-direction: column !important;
   align-items: center !important;
   justify-content: center !important;
-  gap: 14px !important;
+  gap: 12px !important;
   cursor: pointer !important;
   user-select: none !important;
   overflow: hidden !important;
-  box-shadow: 0 10px 25px -4px rgba(0, 0, 0, 0.65), 
-              inset 0 1px 1px rgba(255, 255, 255, 0.2) !important;
-  transition: transform 0.28s cubic-bezier(0.4, 0, 0.2, 1), 
-              box-shadow 0.28s ease, 
-              border-color 0.28s ease !important;
+  box-shadow: 0 8px 24px rgba(0, 0, 0, 0.4) !important;
+  transition: all 0.28s cubic-bezier(0.4, 0, 0.2, 1) !important;
 }
-/* 5. Efek Saat Kursor Diarahkan (Hover) */
+
+/* Efek Hover Mengangkat & Glow Halus */
 .skill-card-tool:hover {
   transform: translateY(-6px) !important;
-  border-color: rgba(96, 165, 250, 0.45) !important;
-  box-shadow: 0 16px 36px -6px rgba(0, 0, 0, 0.8),
-              0 0 25px rgba(37, 99, 235, 0.35),
-              inset 0 1px 2px rgba(255, 255, 255, 0.35) !important;
+  background: rgba(17, 28, 52, 0.85) !important;
+  border-color: rgba(56, 189, 248, 0.45) !important;
+  box-shadow: 0 16px 36px -6px rgba(0, 0, 0, 0.65), 0 0 20px rgba(56, 189, 248, 0.2) !important;
 }
 
-.skill-card-tool:hover::before {
-  border-color: #ffffff !important;
-  filter: drop-shadow(0 0 8px #ffffff) 
-          drop-shadow(0 0 18px rgba(251, 191, 36, 0.9)) !important;
+/* 3. Wadah Konten di Dalam Kartu */
+.portfolio-skill-card-content {
+  width: 100% !important;
+  height: 100% !important;
+  display: flex !important;
+  flex-direction: column !important;
+  align-items: center !important;
+  justify-content: center !important;
+  gap: 12px !important;
+  padding: 0 !important;
+  box-sizing: border-box !important;
 }
 
-.skill-card-tool:hover::after {
-  border-color: #d8b4fe !important;
-  filter: drop-shadow(0 0 12px rgba(192, 132, 252, 0.9)) !important;
-}
-
-/* 6. Wadah Logo Ikon */
+/* 4. Wadah Logo Ikon Besar (56px) */
 .tool-icon-wrapper {
-  width: 58px !important;
-  height: 58px !important;
+  width: 62px !important;
+  height: 62px !important;
   display: flex !important;
   align-items: center !important;
   justify-content: center !important;
   transition: transform 0.28s cubic-bezier(0.34, 1.56, 0.64, 1) !important;
-  position: relative !important;
-  z-index: 1 !important;
 }
 
 .skill-card-tool:hover .tool-icon-wrapper {
-  transform: scale(1.15) !important;
+  transform: scale(1.12) !important;
 }
 
 .tool-svg-icon {
-  width: 52px !important;
-  height: 52px !important;
+  width: 56px !important;
+  height: 56px !important;
   display: block !important;
   filter: drop-shadow(0 4px 10px rgba(0, 0, 0, 0.35)) !important;
 }
 
-/* 7. Tulisan Nama Tool (Tebal, Putih Bersih seperti 'React') */
+/* 5. Tulisan Nama Tool (Muat "Microsoft", Rapi & Tidak Terpotong) */
 .tool-name {
   font-family: 'Plus Jakarta Sans', system-ui, -apple-system, sans-serif !important;
-  font-size: 1rem !important;
+  font-size: 0.84rem !important;
   font-weight: 700 !important;
   color: #ffffff !important;
   text-align: center !important;
-  letter-spacing: -0.3px !important;
+  letter-spacing: -0.2px !important;
   margin: 0 !important;
-  padding: 0 !important;
-  position: relative !important;
-  z-index: 1 !important;
-  text-shadow: 0 2px 8px rgba(0, 0, 0, 0.5) !important;
-}
-
-.skill-card-tool:hover .tool-name {
-  color: #ffffff !important;
+  padding: 0 4px !important;
+  white-space: normal !important; /* KUNCI: Mencegah teks terpotong */
+  line-height: 1.25 !important;
+  word-break: normal !important;
 }
 /* ==========================================================================
    BORDER GLOW CARD INTERACTIVE (SESUAI INSPECT ELEMENT)
