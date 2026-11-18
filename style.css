@@ -1572,3 +1572,7 @@ ul {
   line-height: 1.6;
   margin-bottom: 24px;
 }
+.portfolio-tab-pane.active,
+.tab-content.active {
+  display: block !important;
+}
