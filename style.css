@@ -1658,25 +1658,6 @@ ul {
               box-shadow 0.28s ease, 
               border-color 0.28s ease !important;
 }
-
-/* 3. CAHAYA SUDUT KIRI ATAS (Sinar Emas-Putih Terang Melengkung) */
-.skill-card-tool::before {
-  content: '' !important;
-  position: absolute !important;
-  top: 0 !important;
-  left: 0 !important;
-  width: 55px !important;
-  height: 55px !important;
-  border-top: 2.5px solid #fff6d6 !important;
-  border-left: 2.5px solid #fff6d6 !important;
-  border-top-left-radius: 22px !important;
-  filter: drop-shadow(0 0 6px rgba(254, 240, 138, 0.95)) 
-          drop-shadow(0 0 14px rgba(245, 158, 11, 0.6)) !important;
-  pointer-events: none !important;
-  z-index: 2 !important;
-  transition: filter 0.3s ease, border-color 0.3s ease !important;
-}
-
 /* 4. PANTULAN CAHAYA UNGU SUDUT KIRI BAWAH */
 .skill-card-tool::after {
   content: '' !important;
