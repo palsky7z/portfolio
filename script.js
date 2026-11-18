@@ -87,3 +87,34 @@ document.addEventListener('DOMContentLoaded', () => {
       });
     });
   }
+// Logika Modal Popup Interaktif (Portfolio-Skills)
+const modal = document.getElementById('detail-modal');
+const modalTitle = document.getElementById('modal-title');
+const modalDesc = document.getElementById('modal-desc');
+const modalCategory = document.getElementById('modal-category');
+const modalLevel = document.getElementById('modal-level');
+
+function openSkillModal(name, desc, category, level) {
+  if (!modal) return;
+  modalTitle.textContent = name;
+  modalDesc.textContent = desc;
+  modalCategory.textContent = category;
+  modalLevel.textContent = level;
+  modal.classList.add('active');
+}
+
+function closeModal() {
+  if (modal) modal.classList.remove('active');
+}
+
+function closeModalOnBackdrop(event) {
+  if (event.target === modal) {
+    closeModal();
+  }
+}
+
+document.addEventListener('keydown', (e) => {
+  if (e.key === 'Escape' && modal && modal.classList.contains('active')) {
+    closeModal();
+  }
+});
