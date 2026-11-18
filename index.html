@@ -484,7 +484,6 @@
       </div>
     </section>
   </main>
-
   <!-- Footer -->
   <footer class="footer">
     <div class="container footer-container">
@@ -494,7 +493,19 @@
       </div>
     </div>
   </footer>
-
+  <!-- Modal Details Popup Interaktif -->
+  <div id="detail-modal" class="modal-overlay" onclick="closeModalOnBackdrop(event)">
+    <div class="modal-box">
+      <button class="modal-close" onclick="closeModal()">&times;</button>
+      <div class="modal-tags">
+        <span id="modal-category" class="tag category">Category</span>
+        <span id="modal-level" class="tag level">Expert</span>
+      </div>
+      <h2 id="modal-title" class="modal-title">Tool Name</h2>
+      <p id="modal-desc" class="modal-desc">Tool description details here.</p>
+      <button class="btn-primary" onclick="closeModal()">Tutup</button>
+    </div>
+  </div>
   <script src="script.js"></script>
 </body>
 </html>
