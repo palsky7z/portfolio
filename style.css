@@ -1885,3 +1885,33 @@ ul {
   transform: translateY(-2px);
   box-shadow: 0 10px 25px -5px rgba(2, 6, 23, 0.5), 0 0 15px -3px rgba(56, 189, 248, 0.1);
 }
+/* Fix Ikon SVG Raksasa & Layout Tentang Saya */
+#tentang-saya svg {
+  max-width: 100%;
+  height: auto;
+}
+
+#tentang-saya .w-5 {
+  width: 1.25rem !important;
+  height: 1.25rem !important;
+}
+
+#tentang-saya .w-6 {
+  width: 1.5rem !important;
+  height: 1.5rem !important;
+}
+
+#tentang-saya .w-12 {
+  width: 3rem !important;
+  height: 3rem !important;
+}
+
+#tentang-saya .portfolio-card {
+  background: rgba(255, 255, 255, 0.03);
+  border: 1px solid rgba(255, 255, 255, 0.08);
+  border-radius: 16px;
+  padding: 1.25rem;
+  display: flex;
+  align-items: center;
+  gap: 1rem;
+}
