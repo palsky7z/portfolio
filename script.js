@@ -65,3 +65,25 @@ document.addEventListener('DOMContentLoaded', () => {
     yearElement.textContent = new Date().getFullYear();
   }
 });
+  // 4. Portfolio Tabs Switcher (Projects, Certificates, Achievements, Tech Stack)
+  const tabBtns = document.querySelectorAll('.portfolio-tab-btn');
+  const tabPanes = document.querySelectorAll('.portfolio-tab-pane');
+
+  if (tabBtns.length > 0) {
+    tabBtns.forEach((btn) => {
+      btn.addEventListener('click', () => {
+        const targetTab = btn.getAttribute('data-tab');
+
+        // Reset status aktif pada semua tombol dan panel
+        tabBtns.forEach((b) => b.classList.remove('active'));
+        tabPanes.forEach((pane) => pane.classList.remove('active'));
+
+        // Aktifkan tombol yang diklik & tampilkan panel yang sesuai
+        btn.classList.add('active');
+        const targetPane = document.getElementById(`tab-${targetTab}`);
+        if (targetPane) {
+          targetPane.classList.add('active');
+        }
+      });
+    });
+  }
