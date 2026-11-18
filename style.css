@@ -1398,3 +1398,177 @@ ul {
   font-size: 0.86rem !important;
   white-space: nowrap !important;
 }
+/* ==========================================================================
+   SKILLS & TOOLS 12-GRID & MODAL POPUP
+   ========================================================================== */
+.skills-grid-12 {
+  display: grid;
+  grid-template-columns: repeat(6, 1fr);
+  gap: 18px;
+  width: 100%;
+  max-width: 1040px;
+  margin: 0 auto;
+}
+
+@media (max-width: 1024px) {
+  .skills-grid-12 {
+    grid-template-columns: repeat(4, 1fr);
+    gap: 16px;
+  }
+}
+
+@media (max-width: 768px) {
+  .skills-grid-12 {
+    grid-template-columns: repeat(3, 1fr);
+    gap: 14px;
+  }
+}
+
+@media (max-width: 480px) {
+  .skills-grid-12 {
+    grid-template-columns: repeat(2, 1fr);
+    gap: 12px;
+  }
+}
+
+.skill-card-tool {
+  background: linear-gradient(145deg, rgba(255, 255, 255, 0.05) 0%, rgba(255, 255, 255, 0.015) 100%),
+              rgba(11, 19, 38, 0.85);
+  backdrop-filter: blur(14px);
+  border: 1px solid rgba(255, 255, 255, 0.08);
+  border-radius: 20px;
+  padding: 24px 16px;
+  display: flex;
+  flex-direction: column;
+  align-items: center;
+  justify-content: center;
+  gap: 14px;
+  cursor: pointer;
+  transition: transform 0.25s ease, box-shadow 0.25s ease, border-color 0.25s ease;
+  user-select: none;
+}
+
+.skill-card-tool:hover {
+  transform: translateY(-5px);
+  border-color: rgba(96, 165, 250, 0.45);
+  box-shadow: 0 12px 28px -6px rgba(37, 99, 235, 0.35), 0 0 15px rgba(59, 130, 246, 0.2);
+}
+
+.tool-icon-wrapper {
+  width: 58px;
+  height: 58px;
+  display: flex;
+  align-items: center;
+  justify-content: center;
+  transition: transform 0.25s ease;
+}
+
+.skill-card-tool:hover .tool-icon-wrapper {
+  transform: scale(1.12);
+}
+
+.tool-svg-icon {
+  width: 50px;
+  height: 50px;
+  display: block;
+}
+
+.tool-name {
+  font-size: 0.875rem;
+  font-weight: 600;
+  color: #e2e8f0;
+  text-align: center;
+}
+
+.skill-card-tool:hover .tool-name {
+  color: #ffffff;
+}
+
+/* Modal Popup Box */
+.modal-overlay {
+  position: fixed;
+  inset: 0;
+  background: rgba(0, 0, 0, 0.8);
+  backdrop-filter: blur(8px);
+  z-index: 999;
+  display: flex;
+  align-items: center;
+  justify-content: center;
+  padding: 20px;
+  opacity: 0;
+  visibility: hidden;
+  transition: opacity 0.25s ease, visibility 0.25s ease;
+}
+
+.modal-overlay.active {
+  opacity: 1;
+  visibility: visible;
+}
+
+.modal-box {
+  background: rgba(11, 19, 38, 0.98);
+  border: 1px solid rgba(59, 130, 246, 0.35);
+  border-radius: 20px;
+  max-width: 440px;
+  width: 100%;
+  padding: 28px;
+  position: relative;
+  box-shadow: 0 25px 50px -12px rgba(0, 0, 0, 0.8), 0 0 30px rgba(37, 99, 235, 0.3);
+  transform: scale(0.92);
+  transition: transform 0.25s ease;
+  text-align: left;
+}
+
+.modal-overlay.active .modal-box {
+  transform: scale(1);
+}
+
+.modal-close {
+  position: absolute;
+  top: 16px;
+  right: 18px;
+  background: transparent;
+  border: none;
+  font-size: 1.6rem;
+  color: #94a3b8;
+  cursor: pointer;
+}
+
+.modal-tags {
+  display: flex;
+  gap: 8px;
+  margin-bottom: 14px;
+}
+
+.tag {
+  font-size: 0.72rem;
+  font-weight: 600;
+  padding: 4px 10px;
+  border-radius: 6px;
+}
+
+.tag.category {
+  background: rgba(37, 99, 235, 0.25);
+  color: #93c5fd;
+  border: 1px solid rgba(59, 130, 246, 0.4);
+}
+
+.tag.level {
+  background: rgba(16, 185, 129, 0.25);
+  color: #6ee7b7;
+  border: 1px solid rgba(16, 185, 129, 0.4);
+}
+
+.modal-title {
+  font-size: 1.35rem;
+  font-weight: 700;
+  color: #ffffff;
+  margin-bottom: 10px;
+}
+
+.modal-desc {
+  font-size: 0.88rem;
+  color: #cbd5e1;
+  line-height: 1.6;
+  margin-bottom: 24px;
+}
