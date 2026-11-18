@@ -1862,3 +1862,28 @@ ul {
   margin: 0;
   text-shadow: 0 2px 8px rgba(0, 0, 0, 0.5);
 }
+
+/* Pastikan teks nama tool tidak turun baris */
+.portfolio-skill-card-content {
+  width: 100% !important;
+  height: 100% !important;
+  display: flex !important;
+  flex-direction: column !important;
+  align-items: center !important;
+  justify-content: center !important;
+  gap: 10px !important;
+  padding: 12px 6px !important;
+  box-sizing: border-box !important;
+}
+
+.tool-name {
+  font-family: 'Plus Jakarta Sans', system-ui, -apple-system, sans-serif !important;
+  font-size: 0.86rem !important;
+  font-weight: 700 !important;
+  color: #ffffff !important;
+  text-align: center !important;
+  white-space: nowrap !important; /* KUNCI: Mencegah kata turun ke bawah */
+  letter-spacing: -0.2px !important;
+  margin: 0 !important;
+  padding: 0 !important;
+}
