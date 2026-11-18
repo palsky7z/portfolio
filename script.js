@@ -65,22 +65,28 @@ document.addEventListener('DOMContentLoaded', () => {
     yearElement.textContent = new Date().getFullYear();
   }
 });
-  // 4. Portfolio Tabs Switcher (Projects, Certificates, Achievements, Tech Stack)
-  const tabBtns = document.querySelectorAll('.portfolio-tab-btn');
-  const tabPanes = document.querySelectorAll('.portfolio-tab-pane');
-
+  // 4. Portfolio Tabs Switcher (Projects, Certificates, Achievements, Skill & Tools)
+  const tabBtns = document.querySelectorAll('.portfolio-tab-btn, .tab-button');
+  const tabPanes = document.querySelectorAll('.portfolio-tab-pane, .tab-content');
   if (tabBtns.length > 0) {
     tabBtns.forEach((btn) => {
       btn.addEventListener('click', () => {
-        const targetTab = btn.getAttribute('data-tab');
-
-        // Reset status aktif pada semua tombol dan panel
+        const rawTab = btn.getAttribute('data-tab') || btn.getAttribute('id')?.replace('tab-', '');
+        const targetTab = rawTab ? rawTab.toLowerCase().trim() : '';
+        // Reset semua tombol dan panel aktif
         tabBtns.forEach((b) => b.classList.remove('active'));
         tabPanes.forEach((pane) => pane.classList.remove('active'));
-
-        // Aktifkan tombol yang diklik & tampilkan panel yang sesuai
+        // Aktifkan tombol yang diklik
         btn.classList.add('active');
-        const targetPane = document.getElementById(`tab-${targetTab}`);
+        // Cari panel yang cocok secara otomatis
+        let targetPane = document.getElementById(`tab-${targetTab}`) || 
+                         document.getElementById(`section-${targetTab}`);
+        // Jika tombol berisi kata skill / tech / tools, otomatis arahkan ke tab skills
+        if (!targetPane && (targetTab.includes('skill') || targetTab.includes('tech') || targetTab.includes('tool'))) {
+          targetPane = document.getElementById('tab-skills') || 
+                       document.getElementById('tab-tech-stack') || 
+                       document.getElementById('section-skills');
+        }
         if (targetPane) {
           targetPane.classList.add('active');
         }
