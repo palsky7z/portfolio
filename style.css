@@ -1915,3 +1915,120 @@ ul {
   align-items: center;
   gap: 1rem;
 }
+/* ==========================================================================
+   SKILLS & TOOLS PERSIS ALA ALFARI.MY.ID
+   ========================================================================== */
+
+/* 1. Grid 6 Kolom Simetris & Rapi */
+.skills-grid-12 {
+  display: grid !important;
+  grid-template-columns: repeat(6, 1fr) !important;
+  gap: 18px !important;
+  max-width: 980px !important;
+  margin: 0 auto !important;
+  width: 100% !important;
+  padding: 10px 0 !important;
+}
+
+@media (max-width: 1024px) {
+  .skills-grid-12 {
+    grid-template-columns: repeat(4, 1fr) !important;
+    gap: 16px !important;
+  }
+}
+
+@media (max-width: 768px) {
+  .skills-grid-12 {
+    grid-template-columns: repeat(3, 1fr) !important;
+    gap: 14px !important;
+  }
+}
+
+@media (max-width: 480px) {
+  .skills-grid-12 {
+    grid-template-columns: repeat(2, 1fr) !important;
+    gap: 12px !important;
+  }
+}
+
+/* 2. Kartu Sleek Glassmorphism (Tanpa Garis Sudut yang Menumpuk) */
+.skill-card-tool {
+  position: relative !important;
+  aspect-ratio: 1 / 1.05 !important;
+  background: rgba(13, 21, 38, 0.75) !important;
+  backdrop-filter: blur(12px) !important;
+  -webkit-backdrop-filter: blur(12px) !important;
+  border: 1px solid rgba(255, 255, 255, 0.08) !important;
+  border-radius: 20px !important;
+  padding: 22px 10px 16px !important;
+  display: flex !important;
+  flex-direction: column !important;
+  align-items: center !important;
+  justify-content: center !important;
+  cursor: pointer !important;
+  user-select: none !important;
+  overflow: hidden !important;
+  transition: all 0.25s cubic-bezier(0.4, 0, 0.2, 1) !important;
+  box-shadow: 0 4px 20px rgba(0, 0, 0, 0.3) !important;
+}
+
+/* Hilangkan garis flare sudut agar bersih & elegan seperti alfari */
+.skill-card-tool::before,
+.skill-card-tool::after,
+.skill-card-tool .edge-light {
+  display: none !important;
+}
+
+/* Efek Hover Mengangkat Halus */
+.skill-card-tool:hover {
+  transform: translateY(-6px) !important;
+  background: rgba(17, 28, 52, 0.85) !important;
+  border-color: rgba(56, 189, 248, 0.4) !important;
+  box-shadow: 0 12px 28px -4px rgba(0, 0, 0, 0.5), 0 0 15px rgba(56, 189, 248, 0.15) !important;
+}
+
+/* 3. Wadah Konten Kartu */
+.portfolio-skill-card-content {
+  width: 100% !important;
+  height: 100% !important;
+  display: flex !important;
+  flex-direction: column !important;
+  align-items: center !important;
+  justify-content: center !important;
+  gap: 14px !important;
+  padding: 0 !important;
+}
+
+/* 4. Ukuran Ikon Besar & Gagah (54px - 58px) */
+.tool-icon-wrapper {
+  width: 58px !important;
+  height: 58px !important;
+  display: flex !important;
+  align-items: center !important;
+  justify-content: center !important;
+  transition: transform 0.25s ease !important;
+}
+
+.skill-card-tool:hover .tool-icon-wrapper {
+  transform: scale(1.1) !important;
+}
+
+.tool-svg-icon {
+  width: 54px !important;
+  height: 54px !important;
+  display: block !important;
+  filter: drop-shadow(0 4px 8px rgba(0, 0, 0, 0.35)) !important;
+}
+
+/* 5. Tipografi Rapi di Bawah Ikon */
+.tool-name {
+  font-family: 'Plus Jakarta Sans', system-ui, sans-serif !important;
+  font-size: 0.82rem !important;
+  font-weight: 700 !important;
+  color: #ffffff !important;
+  text-align: center !important;
+  margin: 0 !important;
+  padding: 0 4px !important;
+  white-space: nowrap !important;
+  letter-spacing: -0.2px !important;
+}
