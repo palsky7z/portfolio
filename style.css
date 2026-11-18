@@ -1399,89 +1399,111 @@ ul {
   white-space: nowrap !important;
 }
 /* ==========================================================================
-   SKILLS & TOOLS 12-GRID & MODAL POPUP
+   SKILLS & TOOLS 12-GRID KOTAK PERSEGI DENGAN EFEK CAHAYA (GAMBAR 2)
    ========================================================================== */
 .skills-grid-12 {
-  display: grid;
-  grid-template-columns: repeat(6, 1fr);
-  gap: 18px;
-  width: 100%;
-  max-width: 1040px;
-  margin: 0 auto;
+  display: grid !important;
+  grid-template-columns: repeat(6, 1fr) !important; /* 6 Kolom Kotak */
+  gap: 18px !important;
+  width: 100% !important;
+  max-width: 960px !important;
+  margin: 0 auto !important;
 }
 
 @media (max-width: 1024px) {
   .skills-grid-12 {
-    grid-template-columns: repeat(4, 1fr);
-    gap: 16px;
+    grid-template-columns: repeat(4, 1fr) !important;
   }
 }
 
 @media (max-width: 768px) {
   .skills-grid-12 {
-    grid-template-columns: repeat(3, 1fr);
-    gap: 14px;
+    grid-template-columns: repeat(3, 1fr) !important;
+    gap: 14px !important;
   }
 }
 
 @media (max-width: 480px) {
   .skills-grid-12 {
-    grid-template-columns: repeat(2, 1fr);
-    gap: 12px;
+    grid-template-columns: repeat(3, 1fr) !important;
+    gap: 10px !important;
   }
 }
 
+/* KOTAK PERSEGI PROPORSIONAL DENGAN CAHAYA SEDIKIT (EFEK KARTU REACT GAMBAR 2) */
 .skill-card-tool {
-  background: linear-gradient(145deg, rgba(255, 255, 255, 0.05) 0%, rgba(255, 255, 255, 0.015) 100%),
-              rgba(11, 19, 38, 0.85);
-  backdrop-filter: blur(14px);
-  border: 1px solid rgba(255, 255, 255, 0.08);
-  border-radius: 20px;
-  padding: 24px 16px;
-  display: flex;
-  flex-direction: column;
-  align-items: center;
-  justify-content: center;
-  gap: 14px;
-  cursor: pointer;
-  transition: transform 0.25s ease, box-shadow 0.25s ease, border-color 0.25s ease;
-  user-select: none;
+  position: relative !important;
+  aspect-ratio: 1 / 1 !important; /* Mengunci bentuk kotak persegi sempurna */
+  background: radial-gradient(circle at top right, rgba(59, 130, 246, 0.12) 0%, rgba(13, 20, 36, 0.85) 65%) !important;
+  backdrop-filter: blur(14px) !important;
+  border: 1px solid rgba(255, 255, 255, 0.1) !important;
+  border-radius: 18px !important;
+  padding: 16px 10px !important;
+  display: flex !important;
+  flex-direction: column !important;
+  align-items: center !important;
+  justify-content: center !important;
+  gap: 10px !important;
+  cursor: pointer !important;
+  user-select: none !important;
+  overflow: hidden !important;
+  box-shadow: inset 0 1px 0 rgba(255, 255, 255, 0.15), 0 8px 24px rgba(0, 0, 0, 0.4) !important;
+  transition: all 0.28s cubic-bezier(0.4, 0, 0.2, 1) !important;
 }
 
+/* Efek Kilau Cahaya Halus di Sudut Kanan Atas */
+.skill-card-tool::before {
+  content: '' !important;
+  position: absolute !important;
+  top: 0 !important;
+  right: 0 !important;
+  width: 65px !important;
+  height: 65px !important;
+  background: radial-gradient(circle at top right, rgba(96, 165, 250, 0.5) 0%, transparent 70%) !important;
+  pointer-events: none !important;
+  border-radius: 0 18px 0 0 !important;
+}
+
+/* Efek Menyala Saat Kursor Diarahkan */
 .skill-card-tool:hover {
-  transform: translateY(-5px);
-  border-color: rgba(96, 165, 250, 0.45);
-  box-shadow: 0 12px 28px -6px rgba(37, 99, 235, 0.35), 0 0 15px rgba(59, 130, 246, 0.2);
+  transform: translateY(-5px) !important;
+  border-color: rgba(96, 165, 250, 0.65) !important;
+  box-shadow: 0 0 25px rgba(37, 99, 235, 0.4), inset 0 1px 2px rgba(255, 255, 255, 0.3), 0 12px 30px rgba(0, 0, 0, 0.5) !important;
+}
+
+.skill-card-tool:hover::before {
+  background: radial-gradient(circle at top right, rgba(147, 197, 253, 0.8) 0%, transparent 75%) !important;
 }
 
 .tool-icon-wrapper {
-  width: 58px;
-  height: 58px;
-  display: flex;
-  align-items: center;
-  justify-content: center;
-  transition: transform 0.25s ease;
+  width: 50px !important;
+  height: 50px !important;
+  display: flex !important;
+  align-items: center !important;
+  justify-content: center !important;
+  transition: transform 0.25s ease !important;
 }
 
 .skill-card-tool:hover .tool-icon-wrapper {
-  transform: scale(1.12);
+  transform: scale(1.14) !important;
 }
 
 .tool-svg-icon {
-  width: 50px;
-  height: 50px;
-  display: block;
+  width: 44px !important;
+  height: 44px !important;
+  display: block !important;
 }
 
 .tool-name {
-  font-size: 0.875rem;
-  font-weight: 600;
-  color: #e2e8f0;
-  text-align: center;
+  font-size: 0.84rem !important;
+  font-weight: 600 !important;
+  color: #e2e8f0 !important;
+  text-align: center !important;
+  letter-spacing: -0.2px !important;
 }
 
 .skill-card-tool:hover .tool-name {
-  color: #ffffff;
+  color: #ffffff !important;
 }
 
 /* Modal Popup Box */
