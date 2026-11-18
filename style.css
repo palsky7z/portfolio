@@ -503,7 +503,285 @@ ul {
   70% { transform: scale(1); box-shadow: 0 0 0 8px rgba(52, 211, 153, 0); }
   100% { transform: scale(0.95); box-shadow: 0 0 0 0 rgba(52, 211, 153, 0); }
 }
+/* ==========================================================================
+   PORTFOLIO INTERACTIVE TABS (SESUAI GAMBAR REFERENSI)
+   ========================================================================== */
+.portfolio-section {
+  padding: 96px 0;
+}
 
+.portfolio-main-title {
+  font-size: 3rem;
+  font-weight: 800;
+  text-align: center;
+  margin-bottom: 28px;
+  color: #ffffff;
+  letter-spacing: -0.5px;
+}
+
+/* Navigasi Kapsul Tab */
+.portfolio-tabs-wrapper {
+  display: flex;
+  justify-content: center;
+  margin-bottom: 48px;
+}
+
+.portfolio-tabs-nav {
+  display: inline-flex;
+  align-items: center;
+  gap: 6px;
+  background: rgba(17, 24, 39, 0.85);
+  border: 1px solid rgba(255, 255, 255, 0.12);
+  padding: 6px;
+  border-radius: 999px;
+  backdrop-filter: blur(14px);
+  box-shadow: 0 8px 28px rgba(0, 0, 0, 0.35);
+  flex-wrap: wrap;
+  justify-content: center;
+}
+
+.portfolio-tab-btn {
+  background: transparent;
+  border: none;
+  color: var(--text-muted);
+  padding: 10px 22px;
+  border-radius: 999px;
+  font-size: 0.92rem;
+  font-weight: 600;
+  cursor: pointer;
+  display: inline-flex;
+  align-items: center;
+  gap: 8px;
+  transition: all 0.25s ease;
+}
+
+.portfolio-tab-btn:hover {
+  color: #ffffff;
+}
+
+/* Tab yang Aktif (Tombol Biru Menonjol) */
+.portfolio-tab-btn.active {
+  background: #2563eb;
+  color: #ffffff;
+  box-shadow: 0 4px 18px rgba(37, 99, 235, 0.45);
+}
+
+/* Kontainer Panel Tab */
+.portfolio-tab-pane {
+  display: none;
+  animation: fadeInTab 0.35s cubic-bezier(0.4, 0, 0.2, 1);
+}
+
+.portfolio-tab-pane.active {
+  display: block;
+}
+
+@keyframes fadeInTab {
+  from {
+    opacity: 0;
+    transform: translateY(12px);
+  }
+  to {
+    opacity: 1;
+    transform: translateY(0);
+  }
+}
+
+/* --- TAB 1: PROJECTS (Gambar 1) --- */
+.portfolio-grid-projects {
+  display: grid;
+  grid-template-columns: repeat(3, 1fr);
+  gap: 28px;
+}
+
+.portfolio-tab-card {
+  background: rgba(255, 255, 255, 0.03);
+  border: 1px solid rgba(255, 255, 255, 0.1);
+  border-radius: 18px;
+  overflow: hidden;
+  display: flex;
+  flex-direction: column;
+  transition: all 0.25s ease;
+}
+
+.portfolio-tab-card:hover {
+  border-color: rgba(37, 99, 235, 0.5);
+  transform: translateY(-4px);
+  box-shadow: 0 16px 36px rgba(0, 0, 0, 0.4);
+}
+
+.tab-card-img {
+  height: 200px;
+  overflow: hidden;
+  background: #090e1b;
+}
+
+.tab-card-img img {
+  width: 100%;
+  height: 100%;
+  object-fit: cover;
+  transition: transform 0.4s ease;
+}
+
+.portfolio-tab-card:hover .tab-card-img img {
+  transform: scale(1.05);
+}
+
+.tab-card-body {
+  padding: 24px;
+  display: flex;
+  flex-direction: column;
+  flex-grow: 1;
+}
+
+.tab-card-title {
+  font-size: 1.25rem;
+  font-weight: 700;
+  color: #ffffff;
+  margin-bottom: 10px;
+}
+
+.tab-card-desc {
+  font-size: 0.92rem;
+  color: var(--text-muted);
+  line-height: 1.6;
+  margin-bottom: 24px;
+  flex-grow: 1;
+}
+
+.tab-card-btn-wrap {
+  margin-top: auto;
+}
+
+.btn-tab-details {
+  display: inline-flex;
+  align-items: center;
+  gap: 8px;
+  padding: 9px 18px;
+  border-radius: 10px;
+  background: rgba(255, 255, 255, 0.05);
+  border: 1px solid rgba(255, 255, 255, 0.14);
+  color: #ffffff;
+  font-size: 0.88rem;
+  font-weight: 600;
+  transition: all 0.2s ease;
+}
+
+.btn-tab-details:hover {
+  background: #2563eb;
+  border-color: #2563eb;
+  transform: translateX(3px);
+}
+
+/* --- TAB 2: CERTIFICATES (Gambar 2) --- */
+.portfolio-grid-certs {
+  display: grid;
+  grid-template-columns: repeat(3, 1fr);
+  gap: 28px;
+}
+
+.cert-display-card {
+  background: rgba(255, 255, 255, 0.03);
+  border: 1px solid rgba(255, 255, 255, 0.1);
+  border-radius: 18px;
+  overflow: hidden;
+  display: flex;
+  flex-direction: column;
+  transition: all 0.25s ease;
+}
+
+.cert-display-card:hover {
+  border-color: rgba(37, 99, 235, 0.5);
+  transform: translateY(-4px);
+}
+
+.cert-display-card img {
+  width: 100%;
+  height: 220px;
+  object-fit: cover;
+  background: #ffffff;
+}
+
+.cert-display-info {
+  padding: 18px 20px;
+  display: flex;
+  justify-content: space-between;
+  align-items: center;
+  background: rgba(17, 24, 39, 0.85);
+  gap: 12px;
+}
+
+.cert-display-info h4 {
+  font-size: 0.98rem;
+  font-weight: 700;
+  color: #ffffff;
+}
+
+/* --- TAB 3: ACHIEVEMENTS (Gambar 3) --- */
+.portfolio-grid-achieve {
+  max-width: 650px;
+  margin: 0 auto;
+}
+
+.achieve-highlight {
+  border-color: rgba(245, 158, 11, 0.35);
+  box-shadow: 0 10px 32px rgba(245, 158, 11, 0.12);
+}
+
+.achieve-highlight img {
+  height: 340px;
+  object-fit: cover;
+}
+
+.achieve-highlight .cert-display-info {
+  flex-direction: column;
+  align-items: flex-start;
+  gap: 6px;
+}
+
+.achieve-highlight .cert-display-info p {
+  font-size: 0.88rem;
+  color: var(--text-muted);
+}
+
+/* --- TAB 4: TECH STACK (Gambar 4) --- */
+.tech-stack-cards-grid {
+  display: grid;
+  grid-template-columns: repeat(auto-fill, minmax(130px, 1fr));
+  gap: 20px;
+  max-width: 920px;
+  margin: 0 auto;
+}
+
+.tech-icon-card {
+  background: rgba(255, 255, 255, 0.035);
+  border: 1px solid rgba(255, 255, 255, 0.08);
+  border-radius: 18px;
+  padding: 26px 16px;
+  display: flex;
+  flex-direction: column;
+  align-items: center;
+  justify-content: center;
+  gap: 14px;
+  transition: all 0.25s ease;
+}
+
+.tech-icon-card:hover {
+  background: rgba(255, 255, 255, 0.08);
+  border-color: rgba(37, 99, 235, 0.5);
+  transform: translateY(-4px);
+  box-shadow: 0 10px 24px rgba(0, 0, 0, 0.3);
+}
+
+.tech-icon-card i {
+  font-size: 2.6rem;
+}
+
+.tech-icon-card span {
+  font-size: 0.88rem;
+  font-weight: 600;
+  color: #f3f4f6;
+}
 /* ==========================================================================
    SKILLS SECTION
    ========================================================================== */
