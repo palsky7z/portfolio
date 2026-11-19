@@ -80,54 +80,9 @@
       </div>
     </section>
 
-     <!-- Section Tentang Saya - Naufal Giovedi Ronswid -->
+  <!-- Section Tentang Saya - Naufal Giovedi Ronswid -->
 <section id="tentang-saya" style="max-width: 1040px; margin: 0 auto; padding: 4rem 1.5rem;">
   
-  <style>
-    .grid-simetris-2 {
-      display: grid;
-      grid-template-columns: repeat(2, minmax(0, 1fr));
-      gap: 1.5rem;
-    }
-    .card-tentang-large {
-      display: flex;
-      align-items: center;
-      gap: 1.25rem;
-      padding: 1.25rem 1.5rem;
-      background: rgba(13, 21, 38, 0.75);
-      border: 1px solid rgba(255, 255, 255, 0.08);
-      border-radius: 20px;
-      height: 100%;
-      box-sizing: border-box;
-      transition: all 0.25s ease;
-    }
-    .card-tentang-large:hover {
-      border-color: rgba(56, 189, 248, 0.35);
-      transform: translateY(-2px);
-    }
-    .card-tentang-small {
-      display: flex;
-      align-items: center;
-      gap: 1rem;
-      padding: 1.15rem 1.25rem;
-      background: rgba(13, 21, 38, 0.75);
-      border: 1px solid rgba(255, 255, 255, 0.08);
-      border-radius: 16px;
-      height: 100%;
-      box-sizing: border-box;
-      transition: all 0.25s ease;
-    }
-    .card-tentang-small:hover {
-      border-color: rgba(56, 189, 248, 0.35);
-      transform: translateY(-2px);
-    }
-    @media (max-width: 768px) {
-      .grid-simetris-2 {
-        grid-template-columns: 1fr;
-      }
-    }
-  </style>
-
   <!-- Header Section -->
   <div style="text-align: center; max-width: 780px; margin: 0 auto 3.5rem auto;">
     <div style="display: inline-flex; align-items: center; justify-content: center; padding: 0.35rem 1.25rem; border-radius: 9999px; background: rgba(8, 47, 73, 0.7); border: 1px solid rgba(14, 165, 233, 0.3); margin-bottom: 1.25rem;">
@@ -154,12 +109,13 @@
     </div>
   </div>
 
+  <!-- CONTAINER UTAMA (Menumpuk Baris 1 & Baris 2 ke Bawah Secara Rapi) -->
   <div style="display: flex; flex-direction: column; gap: 2.25rem;">
     
-        <!-- ROW 1: Education & Internship (DENGAN LOGO RESMI MASING-MASING) -->
+    <!-- BARIS 1: Education (Kiri) & Internship (Kanan) -->
     <div class="grid-simetris-2">
       
-      <!-- Education: Universitas Andalas -->
+      <!-- Education -->
       <div style="display: flex; flex-direction: column;">
         <div style="display: flex; align-items: center; gap: 0.65rem; margin-bottom: 0.85rem;">
           <svg width="20" height="20" style="width:20px; height:20px; flex-shrink:0; color:#38bdf8;" xmlns="http://www.w3.org/2000/svg" viewBox="0 0 24 24" fill="none" stroke="currentColor" stroke-width="2" stroke-linecap="round" stroke-linejoin="round">
@@ -168,19 +124,19 @@
           <h3 style="font-size: 1.15rem; font-weight: 700; color: #ffffff; margin: 0;">Education</h3>
         </div>
 
-        <div class="card-tentang-large">
-          <div style="width: 68px; height: 68px; min-width: 68px; display: flex; align-items: center; justify-content: center; flex-shrink: 0;">
-            <img src="logo unand.png" alt="Logo Universitas Andalas" class="org-logo-img" onerror="this.src='https://upload.wikimedia.org/wikipedia/commons/thumb/f/fc/Logo_Universitas_Andalas.png/300px-Logo_Universitas_Andalas.png'" />
+        <div class="card-tentang">
+          <div style="width: 58px; height: 58px; min-width: 58px; display: flex; align-items: center; justify-content: center; flex-shrink: 0;">
+            <img src="logo unand.png" alt="Logo Universitas Andalas" style="width: 100%; height: 100%; object-fit: contain; filter: drop-shadow(0 2px 8px rgba(0,0,0,0.4));" />
           </div>
-          <div style="min-width: 0;">
-            <h4 style="font-size: 1.15rem; font-weight: 700; color: #ffffff; margin: 0; line-height: 1.3;">Universitas Andalas</h4>
-            <p style="font-size: 0.95rem; color: #94a3b8; margin: 0.35rem 0 0 0; line-height: 1.4;">S1 Administrasi Publik • IPK 3.78 (Cum Laude)</p>
-            <span style="display: inline-block; font-size: 0.875rem; font-weight: 600; color: #38bdf8; margin-top: 0.45rem;">2022 – 2026</span>
+          <div>
+            <h4 style="font-size: 1.05rem; font-weight: 700; color: #ffffff; margin: 0;">Universitas Andalas</h4>
+            <p style="font-size: 0.875rem; color: #94a3b8; margin: 0.25rem 0 0 0;">S1 Administrasi Publik • IPK 3.78 (Cum Laude)</p>
+            <span style="display: inline-block; font-size: 0.8rem; font-weight: 600; color: #38bdf8; margin-top: 0.35rem;">2022 – 2026</span>
           </div>
         </div>
       </div>
 
-      <!-- Internship: PT Agro Muko -->
+      <!-- Internship -->
       <div style="display: flex; flex-direction: column;">
         <div style="display: flex; align-items: center; gap: 0.65rem; margin-bottom: 0.85rem;">
           <svg width="20" height="20" style="width:20px; height:20px; flex-shrink:0; color:#22d3ee;" xmlns="http://www.w3.org/2000/svg" viewBox="0 0 24 24" fill="none" stroke="currentColor" stroke-width="2" stroke-linecap="round" stroke-linejoin="round">
@@ -189,21 +145,22 @@
           <h3 style="font-size: 1.15rem; font-weight: 700; color: #ffffff; margin: 0;">Internship</h3>
         </div>
 
-        <div class="card-tentang-large">
-          <!-- Logo Agro Muko 68px (Simetris & Serasi dengan Logo Unand) -->
-          <div style="width: 68px; height: 68px; min-width: 68px; display: flex; align-items: center; justify-content: center; flex-shrink: 0;">
-            <img src="logo-agromuko.png" alt="Logo PT Agro Muko" style="width: 100%; height: 100%; object-fit: contain; filter: drop-shadow(0 4px 10px rgba(0, 0, 0, 0.4));" />
+        <div class="card-tentang">
+          <div style="width: 58px; height: 58px; min-width: 58px; display: flex; align-items: center; justify-content: center; flex-shrink: 0;">
+            <img src="agromuko.png" alt="Logo PT Agro Muko" style="width: 100%; height: 100%; object-fit: contain; filter: drop-shadow(0 2px 8px rgba(0,0,0,0.4));" onerror="this.onerror=null; this.src='https://ui-avatars.com/api/?name=Agro+Muko&background=ea580c&color=fff&rounded=true';" />
           </div>
-          <div style="min-width: 0;">
-            <h4 style="font-size: 1.15rem; font-weight: 700; color: #ffffff; margin: 0; line-height: 1.3;">PT Agro Muko – Tanah Rekah Estate</h4>
-            <p style="font-size: 0.95rem; color: #94a3b8; margin: 0.35rem 0 0 0; line-height: 1.4;">Staff Office (Administrasi &amp; Operasional)</p>
-            <span style="display: inline-block; font-size: 0.875rem; font-weight: 600; color: #22d3ee; margin-top: 0.45rem;">2025</span>
+          <div>
+            <h4 style="font-size: 1.05rem; font-weight: 700; color: #ffffff; margin: 0;">PT Agro Muko – Tanah Rekah Estate</h4>
+            <p style="font-size: 0.875rem; color: #94a3b8; margin: 0.25rem 0 0 0;">Staff Office (Administrasi &amp; Operasional)</p>
+            <span style="display: inline-block; font-size: 0.8rem; font-weight: 600; color: #22d3ee; margin-top: 0.35rem;">2025</span>
           </div>
         </div>
       </div>
 
-    <!-- ROW 2: Experience & Leadership (4 KARTU DENGAN LOGO RESMI) -->
-    <div style="margin-top: 1.5rem;">
+    </div>
+
+    <!-- BARIS 2: Experience & Leadership (Satu Baris Penuh, Tanpa Kotak Kosong di Sampingnya!) -->
+    <div>
       <div style="display: flex; align-items: center; gap: 0.65rem; margin-bottom: 0.85rem;">
         <svg width="20" height="20" style="width:20px; height:20px; flex-shrink:0; color:#38bdf8;" xmlns="http://www.w3.org/2000/svg" viewBox="0 0 24 24" fill="none" stroke="currentColor" stroke-width="2" stroke-linecap="round" stroke-linejoin="round">
           <rect width="8" height="4" x="8" y="2" rx="1" ry="1"></rect><path d="M16 4h2a2 2 0 0 1 2 2v14a2 2 0 0 1-2 2H6a2 2 0 0 1-2-2V6a2 2 0 0 1 2-2h2"></path><path d="M12 11h4"></path><path d="M12 16h4"></path><path d="M8 11h.01"></path><path d="M8 16h.01"></path>
@@ -211,12 +168,13 @@
         <h3 style="font-size: 1.15rem; font-weight: 700; color: #ffffff; margin: 0;">Experience &amp; Leadership</h3>
       </div>
 
+      <!-- 4 Kartu Tersusun Rapi 2x2 Simetris -->
       <div class="grid-simetris-2">
         
-        <!-- 1. KKN Batu Banyak Unand -->
-        <div class="card-tentang-small">
-          <div style="width: 48px; height: 48px; min-width: 48px; border-radius: 12px; background: rgba(45, 212, 191, 0.08); border: 1px solid rgba(45, 212, 191, 0.2); display: flex; align-items: center; justify-content: center; flex-shrink: 0; padding: 4px; box-sizing: border-box;">
-            <img src="logo unand.png" alt="Logo KKN Unand" class="org-logo-img" onerror="this.src='https://upload.wikimedia.org/wikipedia/commons/thumb/f/fc/Logo_Universitas_Andalas.png/200px-Logo_Universitas_Andalas.png'" />
+        <!-- 1. KKN -->
+        <div class="card-tentang">
+          <div style="width: 48px; height: 48px; min-width: 48px; display: flex; align-items: center; justify-content: center; flex-shrink: 0;">
+            <img src="logo unand.png" alt="Logo KKN Unand" style="width: 100%; height: 100%; object-fit: contain; filter: drop-shadow(0 2px 6px rgba(0,0,0,0.3));" />
           </div>
           <div>
             <h4 style="font-size: 0.95rem; font-weight: 700; color: #ffffff; margin: 0;">Sekretaris KKN Batu Banyak Unand</h4>
@@ -225,22 +183,22 @@
           </div>
         </div>
 
-        <!-- 2. POM FISIP Unand -->
-        <div class="card-tentang-small">
-          <div style="width: 48px; height: 48px; min-width: 48px; border-radius: 12px; background: rgba(56, 189, 248, 0.08); border: 1px solid rgba(56, 189, 248, 0.2); display: flex; align-items: center; justify-content: center; flex-shrink: 0; padding: 4px; box-sizing: border-box;">
-            <img src="logo unand.png" alt="Logo FISIP Unand" class="org-logo-img" onerror="this.src='https://upload.wikimedia.org/wikipedia/commons/thumb/f/fc/Logo_Universitas_Andalas.png/200px-Logo_Universitas_Andalas.png'" />
+        <!-- 2. POM FISIP -->
+        <div class="card-tentang">
+          <div style="width: 48px; height: 48px; min-width: 48px; display: flex; align-items: center; justify-content: center; flex-shrink: 0;">
+            <img src="logo unand.png" alt="Logo POM FISIP" style="width: 100%; height: 100%; object-fit: contain; filter: drop-shadow(0 2px 6px rgba(0,0,0,0.3));" />
           </div>
           <div>
             <h4 style="font-size: 0.95rem; font-weight: 700; color: #ffffff; margin: 0;">Ketua Pelaksana POM FISIP Unand</h4>
-            <p style="font-size: 0.85rem; color: #94a3b8; margin: 0.25rem 0 0 0;">Manajemen Operasional &amp; Koordinasi Pekan Olahraga Mahasiswa</p>
+            <p style="font-size: 0.85rem; color: #94a3b8; margin: 0.25rem 0 0 0;">Manajemen Operasional &amp; Koordinasi Pekan Olahraga</p>
             <span style="display: inline-block; font-size: 0.75rem; font-weight: 600; color: #38bdf8; margin-top: 0.35rem;">2024</span>
           </div>
         </div>
 
-        <!-- 3. AIESEC in Unand -->
-        <div class="card-tentang-small">
-          <div style="width: 48px; height: 48px; min-width: 48px; border-radius: 12px; background: rgba(34, 211, 238, 0.08); border: 1px solid rgba(34, 211, 238, 0.2); display: flex; align-items: center; justify-content: center; flex-shrink: 0; padding: 6px; box-sizing: border-box;">
-            <img src="https://upload.wikimedia.org/wikipedia/commons/thumb/4/4a/AIESEC-New-Logo1.png/320px-AIESEC-New-Logo1.png" alt="Logo AIESEC" class="org-logo-img" referrerpolicy="no-referrer" />
+        <!-- 3. AIESEC Youthfest (Dilengkapi fallback agar tidak pecah gambarnya) -->
+        <div class="card-tentang">
+          <div style="width: 48px; height: 48px; min-width: 48px; display: flex; align-items: center; justify-content: center; flex-shrink: 0;">
+            <img src="aiesec.png" alt="Logo AIESEC" style="width: 100%; height: 100%; object-fit: contain; filter: drop-shadow(0 2px 6px rgba(0,0,0,0.3));" onerror="this.onerror=null; this.src='https://upload.wikimedia.org/wikipedia/commons/thumb/0/00/AIESEC_logo.svg/320px-AIESEC_logo.svg.png';" />
           </div>
           <div>
             <h4 style="font-size: 0.95rem; font-weight: 700; color: #ffffff; margin: 0;">Local Project Youthfest – AIESEC in Unand</h4>
@@ -249,10 +207,10 @@
           </div>
         </div>
 
-        <!-- 4. IAPA Indonesia -->
-        <div class="card-tentang-small">
-          <div style="width: 48px; height: 48px; min-width: 48px; border-radius: 12px; background: rgba(45, 212, 191, 0.08); border: 1px solid rgba(45, 212, 191, 0.2); display: flex; align-items: center; justify-content: center; flex-shrink: 0; padding: 4px; box-sizing: border-box;">
-            <img src="https://www.iapa.or.id/wp-content/uploads/2015/02/logo.png" alt="Logo IAPA Indonesia" class="org-logo-img" referrerpolicy="no-referrer" onerror="this.src='https://www.iapa.or.id/wp-content/uploads/2024/06/Logo-IAPA.png'" />
+        <!-- 4. IAPA -->
+        <div class="card-tentang">
+          <div style="width: 48px; height: 48px; min-width: 48px; display: flex; align-items: center; justify-content: center; flex-shrink: 0;">
+            <img src="iapa.png" alt="Logo IAPA" style="width: 100%; height: 100%; object-fit: contain; filter: drop-shadow(0 2px 6px rgba(0,0,0,0.3));" onerror="this.onerror=null; this.src='https://ui-avatars.com/api/?name=IAPA&background=0284c7&color=fff&rounded=true';" />
           </div>
           <div>
             <h4 style="font-size: 0.95rem; font-weight: 700; color: #ffffff; margin: 0;">Logistic Assistant – IAPA Indonesia</h4>
@@ -263,20 +221,10 @@
 
       </div>
     </div>
-        <div class="card-tentang">
-          ...
-        </div>
 
-      </div> 
-    </div>   
+  </div> <!-- Penutup container utama -->
+</section> <!-- Penutup section Tentang Saya -->
 
-  </div>    
-</section>   
-
-<section class="section portfolio-section" id="portfolio">
-  <div class="container">
-    <h2 class="portfolio-main-title">Portfolio</h2>
-    ...
     <!-- Portfolio Interactive Tabs Section -->
     <section class="section portfolio-section" id="portfolio">
       <div class="container">
